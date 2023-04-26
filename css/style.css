@@ -1,0 +1,421 @@
+:root {
+    --primary-color: 2, 18, 37; 
+    --secondary-color: 9, 47, 88;
+    --accent-color: 242, 198, 7;
+    --white-color: 255, 255, 255;
+    --black-color: 0, 0, 0;
+    --primary-font: "Khand";
+    --secondary-font: "Albert Sans";
+}
+
+/* General Styles */
+body {
+    font-family: var(--secondary-font);
+    font-size: 14px;
+    min-height: 100vh;
+    background-color: rgba(var(--primary-color), 1);
+    display: flex;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+p {
+    margin: 0 0 0 0;
+}
+
+
+/* Header Styles*/
+header {
+    width: 200px;
+    height: 100vh;
+    margin: 0 0 0 0;
+    padding: 200px 0 0 50px;
+    background-color: rgba(var(--black-color), 0.8);
+    border-style: solid;
+    border-width: 0 1px 0 0;
+    border-color: rgba(var(--white-color), 1);
+    position: fixed;
+    z-index: 9;
+}
+
+header nav {
+    margin: 0 -5px 0 0;
+}
+
+header nav ul {
+    text-align: right;
+}
+
+header nav ul li {
+    padding: 0 0 20px 0;
+}
+
+header nav ul li a {
+    color: rgba(var(--white-color), 1);
+    font-family: var(--primary-font);
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header nav ul li a:hover {
+    color: rgba(var(--accent-color), 1);
+}
+
+header nav ul li a::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: rgba(var(--white-color), 1);
+    margin: -2px 0 0 10px;
+    padding: 0 0 0 0;
+}
+
+header nav ul li a:hover::after {
+    background-color: rgba(var(--accent-color), 1);
+    box-shadow: 0 0 10px rgba(var(--accent-color), 1);
+}
+
+
+/* Main Content Styles */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    position: relative;
+}
+
+main .pages {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+main .page-title {
+    width: 100%;
+    background-color: rgba(var(--black-color), 0.9);
+    padding: 15px 0 15px 450px;
+    position: fixed;
+    display: flex;
+}
+
+.page-title h1 {
+    font-family: var(--primary-font);
+    font-size: 45px;
+    color: rgba(var(--white-color), 1);
+    margin: 0 50px 0 0;
+}
+
+.page-title .fact {
+    width: auto;
+    display: flex;
+    align-items: center;
+    margin: 0 20px 0 0;
+}
+
+.page-title .fact h4 {
+    font-family: var(--secondary-font);
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: capitalize;
+    color: rgba(var(--white-color), 1);
+    margin: 0 5px 0 0;
+}
+
+.page-title .fact span {
+    font-family: var(--secondary-font);
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(var(--white-color), 1);
+}
+
+main section {
+    width: calc(100% - 450px);
+    padding: 200px 0 0 450px;
+    background-color: #080202;
+}
+
+.celestials {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.celestials a {
+    color: rgba(var(--white-color), 1);
+}
+
+#sun {
+    background-image: url(../assets/Sun.jpg);
+}
+
+#mercury {
+    background-image: url(../assets/Mercury.jpg);
+}
+
+#venus {
+    background-image: url(../assets/Venus.jpg);
+}
+
+#earth {
+    background-image: url(../assets/Earth.jpg);
+}
+
+#mars {
+    background-image: url(../assets/Mars.jpg);
+}
+
+#jupiter {
+    background-image: url(../assets/Jupiter.jpg);
+}
+
+#saturn {
+    background-image: url(../assets/Saturn.jpg);
+}
+
+#uranus {
+    background-image: url(../assets/Uranus.jpg);
+}
+
+#neptune {
+    background-image: url(../assets/Neptune.jpg);
+}
+
+.celestial-info {
+    width: 500px;
+    background-color: rgba(var(--black-color), 0.7);
+    border: 1px solid rgba(var(--white-color), 1);
+    padding: 25px 30px 25px 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.celestial-info h2 {
+    width: 100%;
+    font-family: var(--primary-font);
+    font-size: 35px;
+    font-weight: 700;
+    color: rgba(var(--white-color), 1);
+    margin: 0 0 20px 0;
+}
+
+.celestial-info .fact {
+    width: 100%;
+    display: flex;
+    margin: 0 0 10px 0;
+}
+
+.celestial-info h4 {
+    font-family: var(--secondary-font);
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: capitalize;
+    color: rgba(var(--white-color), 1);
+    margin: 0 5px 0 0;
+}
+
+.celestial-info span {
+    font-family: var(--secondary-font);
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(var(--white-color), 1);
+}
+
+.celestial-info p {
+    width: 100%;
+    font-family: var(--secondary-font);
+    font-size: 17px;
+    font-weight: 200;
+    line-height: 25px;
+    color: rgba(var(--white-color), 1);
+    margin: 10px 0 0 0;
+}
+
+.celestial-info p:first-child {
+    margin: 20px 0 0 0;
+}
+
+.celestial-info a:hover {
+    color: rgba(var(--accent-color), 1);
+}
+
+section button {
+    font-family: var(--secondary-font);
+    font-size: 17px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: rgba(var(--primary-color), 1);
+    background-color: rgba(var(--accent-color), 1);
+    border: 1px solid rgba(var(--accent-color), 1);
+    margin: 30px 0 0 0;
+    padding: 10px 25px 10px 25px;
+    cursor: pointer;
+    position: relative;
+    z-index: 9;
+}
+
+section button:hover,
+section button:focus {
+    background-color: rgba(var(--white-color), 1);
+    border-width: 1px 1px 0 1px;
+    margin: 30px 0 0 0;
+    padding: 10px 25px 10px 25px;
+    cursor: pointer;
+}
+
+.quick-facts {
+    width: 500px;
+    background-color: rgba(var(--white-color), 1);
+    border: 1px solid rgba(var(--accent-color), 1);
+    margin: -50px 0 0 0;
+    padding: 5px 30px 20px 30px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.celestials button:focus ~ .quick-facts {
+    margin: -1px 0 0 0;
+    opacity: 1;
+}
+
+.quick-facts h4 {
+    font-family: var(--primary-font);
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 15px 0 0 0;
+}
+
+.quick-facts p {
+    font-family: var(--secondary-font);
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 21px;
+    color: rgba(var(--primary-color), 1);
+    margin: 0 0 0 0;
+}
+
+
+/* Footer Styles */
+footer {
+    width: calc(100% - 50px);
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 0 0 50px;
+    z-index: 9;
+}
+
+footer nav {
+    width: 200px;
+}
+
+footer nav ul {
+    padding: 0 20px 20px 0;
+}
+
+footer nav ul li {
+    font-family: var(--secondary-font);
+    font-size: 13px;
+    color: rgba(var(--white-color), 1);
+    padding: 10px 0 0 0;
+}
+
+footer nav ul li button {
+    font-family: var(--secondary-font);
+    font-size: 13px;
+    color: rgba(var(--white-color), 1);
+    background-color: rgba(var(--white-color), 0);
+    border: none;
+    padding: 0 0 0 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 99;
+}
+
+footer .credits {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(var(--white-color), 1);
+    margin: 0 0 0 50px;
+    padding: 10px 15px 10px 15px;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+button#credits:focus ~ #test.credits {
+    margin: 0 0 0 200px;
+    opacity: 1;
+}
+
+footer .credits::before {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 0px;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-right: 7px solid rgba(var(--white-color), 1);
+    position: relative;
+    left: -22px;
+}
+
+footer .credits ul {
+    padding: 0 0 0 0;
+}
+
+footer .credits ul li {
+    font-weight: 800;
+    font-size: 14px;
+    color: rgba(var(--primary-color), 1);
+    display: inline-block;
+    padding: 0 20px 0 0;
+}
+
+footer .credits ul li:last-child {
+    padding: 0 0 0 0;
+}
+
+footer .credits ul li a {
+    font-weight: 400;
+    font-size: 13px;
+    color: rgba(var(--primary-color), 1);
+}
+
+footer .credits ul li a:hover {
+    color: rgba(var(--accent-color), 1);
+}
